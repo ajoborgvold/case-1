@@ -27,7 +27,11 @@ Always work on a branch! Don't make any changes directly to the `main` branch. T
 
 ### Create a new branch
 
-In the terminal, you write `git switch -c new-branch-name`. This will create the new branch and switch to it at the same time. Choose a branch name that describes the task you're currently working on. Whitespace in branch names is not allowed; use dash `-` or underscore `_` instead.
+In the terminal, you write:
+```
+git switch -c new-branch-name
+```
+ This will create the new branch and switch to it at the same time. Choose a branch name that describes the task you're currently working on. Whitespace in branch names is not allowed; use dash `-` or underscore `_` instead.
 
 ### Check and switch branch
 
@@ -47,17 +51,29 @@ When you're done working on a task, you should add and commit the changes.
 
 Write a commit message using the command `git commit -m your-message` describing the changes you've made.
 
+An example:
+```
+git add workflow.md
+git commit -m "edit workflow.md
+```
+
 ## Merge branches
 
-In order to merge your branch with the `main` branch, you have to be on the `main` branch.
+In order to merge your branch with the `main` branch, you have to be on the `main` branch itself.
 
 ### Switch to main
 
-Switch to the `main` branch using the command `git switch main`
+Switch to the `main` branch using the command:
+```
+git switch main
+```
 
 ### Merge your branch into `main`
 
-Merge the branch you've been working on using the command `git merge your-branch-name`
+Merge the branch you've been working on using the command:
+```
+git merge your-branch-name
+```
 
 NB: If there are no merge conflicts, you're now done. If there are conflicts, you need to handle those.
 
@@ -69,5 +85,8 @@ A merge conflict means that your new code cannot be merged with the existing cod
 - When all conflicts are resolved, save and commit the changes.
 
 ## Delete your branch
-
-When your banch is correctly merged into `main`, delete the branch using the command `git branch -d your-branch-name`.
+When your banch is correctly merged into `main`, you should delete the branch. Before doing so, make sure that you're not on the branch that you want to delete. To delete the branch, use the command:
+```
+(git switch main)
+git branch -d your-branch-name
+```
