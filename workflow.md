@@ -1,24 +1,11 @@
 # Workflow
 
 ## Open the GitHub repo locally
-
-### Fork and clone repo
-
 1. Go to: https://github.com/ajoborgvold/case1-rasmus-ajo
-2. Click the `Fork` button and fork the proejct to your own GitHub account.
-3. Go to your own GitHub account and find the forked repo.
-4. Click the green `Code` button and copy the URL.
-
-### Open repo and connect it to original
-
+1. Click the green `Code` button and copy the URL.
 1. In the terminal in VS Code, write the command:
 ```
 git clone your-copied-url
-```
-
-2. Add a remote to the upstream, i.e. the original repo, so that you can get the latest changes in the `main` branch:
-```
-git remote add upstream https://github.com/ajoborgvold/case1-rasmus-ajo
 ```
 
 ## Working with branches
@@ -84,9 +71,16 @@ A merge conflict means that your new code cannot be merged with the existing cod
 - Follow the instructions in VS Code to handle the merge conflict.
 - When all conflicts are resolved, save and commit the changes.
 
+## Push new code
+Check the current status of your local work using the command: `git status`. This will show you all changes made since the code was last pushed to the repo. To push the changes that you have added and commited, use the command:
+```
+git push
+```
+
 ## Delete your branch
-When your banch is correctly merged into `main`, you should delete the branch. Before doing so, make sure that you're not on the branch that you want to delete. To delete the branch, use the command:
+When your banch is correctly merged into `main` and you've pushed the code to the repo, you should delete the branch. Before doing so, make sure that you're not on the branch that you want to delete. To delete the branch, use the command:
 ```
 (git switch main)
 git branch -d your-branch-name
 ```
+You can that start over from the beginning and create a new branch for any new tasks.
