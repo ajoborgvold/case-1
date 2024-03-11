@@ -12,9 +12,14 @@
 ### Open repo and connect it to original
 
 1. In the terminal in VS Code, write the command:
-```git clone your-copied-url```
+```
+git clone your-copied-url
+```
+
 2. Add a remote to the upstream, i.e. the original repo, so that you can get the latest changes in the `main` branch:
-```git remote add upstream https://github.com/ajoborgvold/case1-rasmus-ajo```
+```
+git remote add upstream https://github.com/ajoborgvold/case1-rasmus-ajo
+```
 
 ## Working with branches
 
