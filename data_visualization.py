@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 from matplotlib.dates import DateFormatter
-import numpy as np
 
 from data_analysis import total_sale_per_day, units_sold_per_day, total_sale_per_category, product_sales
 
@@ -32,11 +31,8 @@ def show_sales_per_day():
 # show_sales_per_day()
 
 
-
-
-
 def show_sale_per_category():
-    ax = plt.subplots()
+    fig, ax = plt.subplots()
     
     categories = total_sale_per_category.index
     values = total_sale_per_category.values
@@ -51,7 +47,7 @@ def show_sale_per_category():
 
 
 def show_products_categories():
-    ax = plt.subplots()
+    fig, ax = plt.subplots()
 
     product_sales_pivot = product_sales.unstack()
     product_sales_pivot.T.plot(kind='bar', ax=ax, width=0.8)
@@ -63,4 +59,4 @@ def show_products_categories():
     plt.tight_layout()
     plt.show()
 
-show_products_categories()
+# show_products_categories()
