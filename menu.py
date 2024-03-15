@@ -1,5 +1,5 @@
-from data_cleaning import data_types, missing_values, min_units_sold, min_sale_price, unique_categories, unique_sizes, unique_products
-from data_analysis import total_sale, day_average, median_sale, sorted_product_sales, top_5_products_sale, bottom_5_products_sale, top_5_products_units, bottom_5_products_units, units_sold_per_category, total_sale_per_category, total_sale_per_month, total_sale_per_day, top_day, bottom_day
+from data_cleaning import *
+from data_analysis import *
 
 while True:
     print("Select which part of the data you want to inspect:")
